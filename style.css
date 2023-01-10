@@ -1,372 +1,248 @@
-@media only screen and (max-width: 414px) and (min-width:280px){
+@media only screen and (max-width: 414px){
+    :root{
+        --soft-red: hsl(10, 79%, 65%);
+        --cyan: hsl(186, 34%, 60%);
+        --dark-brown: hsl(25, 47%, 15%);
+        --medium-brown: hsl(28, 10%, 53%);
+        --cream: hsl(27, 66%, 92%);
+        --very-pale-orange: hsl(33, 100%, 98%);
+        --font-type: 'DM Sans';
+        --height: 15;
+    }
+    
+    *{
+        font-family: var(--font-type);
+        margin: 0;
+        padding: 0;
+    }
+    
+    h1, h2,h3, h4, h5, h6{
+        font-family: 'DM Sans';
+    }
     
     body{
-    background-color:#F8E9DD;
-  
-    
-    }
-    .container{
-        width: 375px;
-    }
-    .card-container{
-        top:35%;
-        left: 50%;
-        transform: translate3d(-50%,-50%, 0);
-        position: absolute;
-     
-    }
-    
-    .card-head{
-        width: 343px;
-        height: 97px;
-        background-color: #EC755D;
-        border: none;
-        border-radius: 10px;
-    }
-    
-    
-    .card-content{
+        background-color: var(--cream);
         display: flex;
+        justify-content: center;
         align-items: center;
-        justify-content: space-around;
+        height: 100vh;
     }
     
-    .content1{
-        margin-left: -2rem;
-        
+    .container{
+        width: 540px;
+        height: 660px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     
-
-    .content1 h4{
-        font-family: 'DM Sans', sans-serif;
-       font-style: normal;
-       font-weight: 400;
-       font-size: 15px;
-       line-height: 20px;
-       color: #FFFFFF;
+    .container1{
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        /* padding: 39px; */
+        width: 540px;
+        height: 125px;
+        border-radius: 20px;
+        background-color: var(--soft-red);
     }
-    .content1 h2{
-        font-family: 'DM Sans', sans-serif;       
-        font-style: normal;
+    .container1 .container-card{
+        width: 470px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .container-card label{
+        font-family: DM Sans;
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        text-align: left;
+    
+    }
+    
+    .container-card h5{
+        font-size: 32px;
         font-weight: 700;
+        letter-spacing: 0px;
+        text-align: left;
+    
+    }
+    
+    .container1 label, .container1 h5{
+        color: var(--very-pale-orange);
+    }
+    
+    .container2{
+        width: 540px;
+        height: 511px;
+        border-radius: 20px;
+        background-color: var(--very-pale-orange);
+    }
+    .container2 .container-card{
+        margin: 32px 40px;
+    }
+    
+    div > h6{
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: 0px;
+        text-align: left;
+    }
+    
+    hr{
+        height: 2px;
+        background-color: var(--cream);
+        border: none;
+        border-radius: 1px;
+        margin: 32px 0;
+    }
+    
+    .chart{
+        width: 459.27px;
+        height: 240px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 26px; 
+    }
+    
+    .p-label{
+        border-radius: 5px;
+        color: var(--very-pale-orange);
+        background-color: var(--dark-brown);
+        text-align: center;
+        font-size: 18px;
+        font-weight: 0;
+    }
+    
+    .f-container{
+        height: 87px;
+    }
+    .f-container label, .f-container> div > div label{
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 23px;
+        letter-spacing: 0px;
+        text-align: left;
+    }
+    
+    .f-container div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .f-container div > h5{
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 62px;
+        letter-spacing: 0px;
+        text-align: left;
+    }
+    
+    .f-container> div > div{
+        flex-direction: column;
+        width: 133px;
+    }
+    
+    .f-container> div > div h6{
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 23px;
+        letter-spacing: 0px;
+        text-align: right;
+        align-self: flex-end;
+    }
+    
+    
+    .container{
+        width: 343px;
+        height: 534px;
+    }
+
+    .container1{
+        width: 306px;
+        height: auto;
+        padding: 20px;
+    }
+
+    .container-card label{
+        font-size: 15px;
+    }
+
+    .container-card h5{
         font-size: 24px;
         line-height: 31px;
-        color: #FFFFFF;
-        margin-top:-1rem;
-            }
-    
-    .content2{
-        margin-right:-2rem;
-    }
-    
- 
-    .card-big{
-    width:343px;
-    height: 421px;
-    background-color: #FFFBF6;
-    margin-top: 1rem;
-    /* padding: 20px; */
-    border-radius: 10px;
-    }
-    
-    
-    .top-text{
-     position: relative;
-     left: 1rem;
-     top: 1rem;
-    }
-    
-    .top-text span{
-font-family: 'DM Sans', sans-serif; 
-font-style: normal;
-font-weight: 700;
-font-size: 24px;
-line-height: 31px;
-color: #382314;
- } 
-      
-  
-
-  .bar-graph{
-    position: relative;
-    top: 2rem;
-  }
-
-
-    
-    .bars{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
-  
-    }
-    
-    .bars{
-      
-        margin-top: 3rem;
-    }
-    .bar1{
-        width: 33px;
-        height: 50px;
-        border-radius: 3px;
-        background-color: #EC755D;
-        margin-top: 3.5rem;
-       
-    }
-    .mon span{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1.3rem;
-    
     }
 
-    .mon span{
-font-family: 'DM Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 16px;
-text-align: center;
-color: #92857A;
-       }
-    
-    .bar2{
-        width: 33px;
-        height: 100px;
-        background-color: #EC755D;
-        border-radius: 3px;
-       margin-top: 0.5rem;
+    .container2{
+        width: auto;
+        height: 357px;
+        padding: 32px 20px;
+    }
+
+    .container2 .container-card{
+        margin: 0;
+    }
+
+    div > h6{
+        font-size: 24px;
+        line-height: 31px;
+    }
+
+    .f-container{
+        height: 63px;
+    }
+    .f-container label, .f-container> div > div label{
+        font-family: DM Sans;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
     }
     
-    .tue span{
+    
+    .f-container div > h5{
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 39.06px;
+        letter-spacing: 0px;
+        text-align: left;
+    }
+    
+    .f-container> div > div{
+        flex-direction: column;
+        width: 133px;
+    }
+    
+    .f-container> div > div h6{
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 23px;
+        letter-spacing: 0px;
+        text-align: right;
+        align-self: flex-end;
+    }
+
+    .mychart{
+        height: 100%;
+        width: 50%;
+    }
+
+    .chart{
+        width: 100%;
+        height: 200px;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 1.1rem;
-        
-        } 
-
-        .tue span{
-            font-family: 'DM Sans';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 16px;
-            text-align: center;
-            color: #92857A; 
-        }
-    
-    .bar3{
-        width: 33px;
-        height: 150px;
-        background-color: #76B5BC;
-        border-radius: 3px;
-       margin-top: -2.5rem;
-        
-    }
-    .wed span{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 1.1rem;
-        
-    }
-   
-
-    .wed span{
-font-family: 'DM Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 16px;
-text-align: center;
-color: #92857A;
-    }
-    
-    .bar4{
-        width: 33px;
-        height: 89px;
-        background-color: #EC755D;
-        border-radius: 3px;
-        margin-top: 1rem;
-        
-    }
-    
-
-    .thu span{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 1.4rem;
-    } 
-
-
-    .thu span{
- font-family: 'DM Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 16px;
-text-align: center;
-color: #92857A;
-    }
-    
-    .bar5{
-        width: 33px;
-        height: 67px;
-        border-radius: 3px;
-        background-color:  #EC755D;
-        margin-top: 2.5rem;
-        
-    } 
-
-    .fri span{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 1.3rem;
+        justify-content: space-between;
     }
 
-    .fri span{
-font-family: 'DM Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 16px;
-text-align: center;
-color: #92857A;
+    hr{
+        height: 2px;
+        background-color: var(--cream);
+        border: none;
+        border-radius: 1px;
+        margin: 24px 0;
     }
-    
-    .bar6{
-        width: 33px;
-        height: 124px;
-        border-radius: 3px;
-        background-color:  #EC755D;
-        margin-top: -1rem
-        
-    } 
-
-     .sat span{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 1.2rem;
-    }
-       .sat span{
-font-family: 'DM Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 16px;
-text-align: center;
-color: #92857A;
-       }
-
-     .bar7{
-        width: 33px;
-        height: 73px;
-        border-radius: 3px;
-        background-color:  #EC755D;
-        margin-top: 2.5rem;
-        
-    } 
-  .sun span{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 0.9rem;
-}  
-
-.sun span{
-font-family: 'DM Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 16px;
-text-align: center;
-color: #92857A;
-}
-
-.vertical-line hr{
-    margin-top: 4rem;
-    width: 303px;
-    height: 2px;
-    background-color: #F8E9DD;
-    border: none;
-}
-
-  .last-text{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-   .last-text-left span{
-font-family: 'DM Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 20px;
-color: #92857A;
-   }
-   
- .last-text-left span{
-    position: relative;
-    top:1rem;
- } 
-
-
-  .last-text-left h1{
-font-family: 'DM Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 30px;
-line-height: 39px;
-color: #382314;
-  } 
-
-  .last-text-right h3{
-    font-family: 'DM Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 15px;
-line-height: 20px;
-text-align: right;
-color: #382314
-  }  
-
-  .last-text-right span{
-    font-family: 'DM Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 20px;
-text-align: right;
-color: #92857A;
-  }
-
-
-  .last-text-right span{
-    position: relative;
-    bottom: 1rem;
-  }
-.last-text-right{
-  position: relative;
-  top: 1rem;
-}
-
-.last-text-left{
-    position: relative;
-    top: 0.5rem;
-}
-
-#myChart{
-    position: relative;
-    top: 3rem;
-}
-
 /* .chart{
     width: 303px;
     
