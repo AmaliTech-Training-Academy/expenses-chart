@@ -36,6 +36,7 @@ const data = {
     type: 'bar',
     data,
     options: {
+      maintainAspectRatio: true,
       scales: {
         y: {
           beginAtZero: true,
