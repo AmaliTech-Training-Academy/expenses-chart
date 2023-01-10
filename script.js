@@ -36,7 +36,7 @@ const data = {
     type: 'bar',
     data,
     options: {
-      maintainAspectRatio: true,
+      maintainAspectRatio: false,
       scales: {
         y: {
           beginAtZero: true,
@@ -73,6 +73,8 @@ const data = {
       }
     }
   };
+
+  window.matchMedia('(max-width: 600px)');
 
   // render init block
   const myChart = new Chart(
