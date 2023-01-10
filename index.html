@@ -22,78 +22,42 @@
 </head>
 <body>
   <div class="container">
-    <div class="card-container">
-      <div class="card1">
-          <div class="card-head">
-              <div class="card-content">
-                  <div class="content1">
-                      <h4>My Balance</h4>
-                      <h2>$921.48</h2>
-                  </div>
-                  <div class="content2">
-                      <img src="./images/logo.svg"/>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="card-2">
-           <div class="card-big">
-                   <div class="card-big-content">
-                        <div class="top-text">
-                          <span>Spending-Last 7 days</span>
-                        </div>
-  
-                        
-                        
-                         <div> <canvas id="myChart"></canvas></div>
-                         <script src="/expenses-chart/script.js">
-  
-                         </script>
-                        
-                        
-                       
-                        
-                        
-          
-         </div>
-         <div class="vertical-line">
-          <hr>
-         </div>
-  
-         <div class="last-text">
-            <div class="last-text-left">
-               <span> Total this month</span>
-               <h1>$478.33</h1>
+    <div class="container1">
+        <div class="container-card">
+            <div>
+                <label for="">My Balance</label>
+                <h5>$921.48</h5>
             </div>
-             <div class="last-text-right">
-                <h3>+2.4%</h3>
-                <span>from last month</span>
-             </div>
-         </div>
-      </div>
-           
-   
-      </div>
-  
-  
-  
-  </div>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    
+            <div>
+                <img src="./images/logo.svg" alt="">
+            </div>
+        </div>
     </div>
-  </div>
+    <div class="container2">
+        <div class="container-card">
+            <div>
+                <h6 class="b-color">Spending - Last 7 days</h6>
+            </div>
+            <div class="chart">
+                <canvas id="myChart"></canvas>
+            </div>
+            <script src="./script.js"></script>
+            <hr/>
+            <div class="f-container b-color">
+                <label for="">Total this month</label>
+                <div>
+                    <h5>$478.33</h5>
+                    <div>
+                        <h6>+2.4%</h6>
+                        <label for="">from last month</label>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 </body>
