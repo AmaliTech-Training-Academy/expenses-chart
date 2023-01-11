@@ -3,7 +3,6 @@ const data = {
   datasets: [{
     label: '$',
     fontFamily: 'DM Sans',
-
     data: [ 17.45, 34.91, 52.36, 31.07, 23.39, 43.28, 25.48],
     backgroundColor: [
       'rgba(236, 117, 93, 1)',
@@ -22,7 +21,6 @@ const data = {
   }]
 };
 
-// config 
 const config = {
   type: 'bar',
   data,
@@ -30,35 +28,30 @@ const config = {
     maintainAspectRatio: false,
     scales: {
       y: {
-        beginAtZero: true,
-        backgroundColor: null,
         display:false,
-          
         ticks: {
-         display: false,
-        
-        },
+          display: false,
+         },
          grid: {
           drawTicks:false,
-          drawOnChartArea:false,
-          borderWidth: 0,
+          // drawOnChartArea: false,
+          lineWidth: 0,
           drawBorder: false,
-          display: false,
+          display: true,
          }
       },
       x: {
-          // display:false,
         ticks:{
+          // watch these part well because of the ticks
             display: true,
-            // display: true,
         }, 
 
         grid: {
           drawTicks:false,
           drawBorder: false,
           drawOnChartArea: false,
-          display: false,
-          lineWidth: 0,
+          display: true,
+          // lineWidth: 10,
         }
       }
     },
