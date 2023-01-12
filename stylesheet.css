@@ -35,10 +35,6 @@ body{
     justify-content: space-between;
 }
 
-/* .b-color{
-    color: var(--dark-brown);
-} */
-
 .container1{
     display: flex;
     align-self: center;
@@ -124,6 +120,7 @@ hr{
 .f-container{
     height: 87px;
 }
+
 .f-container label, .f-container> div > div label{
     font-size: 18px;
     font-weight: 400;
@@ -159,3 +156,26 @@ hr{
     text-align: right;
     align-self: flex-end;
 }
+
+  /* css Tooltip */
+/* .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: brown;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+  } */

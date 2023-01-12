@@ -70,7 +70,26 @@ const data = {
             },
             boxWidth: 0,
           }
-        }
+        },
+        tooltip:{
+          borderRadius: 0,
+          backgroundColor: '#382314',
+          yAlign:'bottom', 
+          displayColors: false, 
+          
+          labelPointStyle: function(context){
+             return{
+              // PointStyle: false,
+              rotation: 0
+            }
+           },
+          callbacks: {
+            title: function(context){
+              return '';
+              // return console.log(context);
+            },
+          },
+        },
       }
     }
   };
