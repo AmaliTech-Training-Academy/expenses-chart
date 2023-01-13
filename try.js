@@ -1,11 +1,16 @@
-const data = require('./data.json')
+// import { map } from './data.json';
 // console.log(data);
+import Data from './data.json'
 
-const trydump = data.map((item)=>{
+const trydump = map((item)=>{
     console.log(item);
 })
 
+Data.map((item) => {
+	document.querySelector('.days').innerHTML = item.day;
+	document.querySelector('.price').innerHTML = item.amount;
 
+})
 
 
 
@@ -15,7 +20,7 @@ window.onload = function () {
 		{
 			// Change type to "doughnut", "line", "splineArea", etc.
 			type: "column",
-			dataPoints: data.map((item)=>item)
+			dataPoints: map((item)=>item)
 		}
 		]
 	});

@@ -1,9 +1,18 @@
+// const values = require('./data.json');
+// // console.log(values);
+// const amountValues = values.map((value)=>value.amount)
+// console.log(amountValues);
+
+// import values from './data.json'
+// const content = values;
+
 const data = {
+    // labels: content.map(row => row.day),
     labels: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
     datasets: [{
       label: '$',
       fontFamily: 'DM Sans',
-  
+      // data: content.map(row => row.amount),
       data: [ 17.45, 34.91, 52.36, 31.07, 23.39, 43.28, 25.48],
       backgroundColor: [
         'rgba(236, 117, 93, 1)',
@@ -18,7 +27,7 @@ const data = {
       borderWidth: 0,
       borderRadius: 5,
       borderSkipped: false,
-//       barThickness: 50.36,
+//    barThickness: 50.36,
     }]
   };
 
