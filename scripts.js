@@ -1,83 +1,143 @@
-const data = {
-  labels: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
-  datasets: [{
-    label: '$',
-    fontFamily: 'DM Sans',
-    data: [ 17.45, 34.91, 52.36, 31.07, 23.39, 43.28, 25.48],
-    backgroundColor: [
-      'rgba(236, 117, 93, 1)',
-      'rgba(236, 117, 93, 1)',
-      'rgba(118, 181, 188, 1)',
-      'rgba(236, 117, 93, 1)',
-      'rgba(236, 117, 93, 1)',
-      'rgba(236, 117, 93, 1)',
-      'rgba(236, 117, 93, 1)'
-    ],
-    outerHeight: 177,
-    borderWidth: 0,
-    borderRadius: 5,
-    borderSkipped: false,
-    // barThickness: 50.36,
-  }]
-};
+const chartEl=document.querySelector('#chart');
 
-const config = {
-  type: 'bar',
-  data,
-  options: {
-    maintainAspectRatio: false,
-    scales: {
-      y: {
-        display:false,
-        ticks: {
-          display: false,
-         },
-         grid: {
-          drawTicks:false,
-          // drawOnChartArea: false,
-          lineWidth: 0,
-          drawBorder: false,
-          display: true,
-         }
-      },
-      x: {
-        ticks:{
-          // watch these part well because of the ticks
-            display: true,
-        }, 
 
-        grid: {
-          drawTicks:false,
-          drawBorder: false,
-          drawOnChartArea: false,
-          display: true,
-          // lineWidth: 10,
-        }
-      }
-    },
-    plugins: {
-      legend: {
-        labels: {
-          font: {
-            fontFamily:'DM Sans',
-          },
-          boxWidth: 0,
-        }
-      }
-    }
-  }
-};
+function chartItem(item) {
+    return `
+        <div class="chart-card">
+          <button class="chart-btn">
+              <div class="chart-item"></div>
+              <p class="chart-item-day">${item.day}</p>
+          </button>
+          <p class="chart-item-tooltip">$${item.amount}</p>
+        </div>
+    `;
+}
 
-// if(window.matchMedia('(max-width: 375px)').matches){
-//   data.datasets.barThickness = 33;
-// }
-// elif(window.matchMedia('(max-width:100%)').matches){
-//   data.datasets.barThickness = 50.36;
+
+// chartdiv.innerHTML = `
+//   <button class="chart-btn">
+//       <div class="chart-item"></div>
+//       <p class="chart-item-day">${querydata.day}</p>
+//   </button>
+//   <p class="chart-item-tooltip">${querydata.amount}</p>
+// `
+
+async function chart(){
+    const chartdata= await fetch('./data.json');
+    const data= await chartdata.json();
+    console.log(data);
+    //  list_ = JSON.parse(data)
+     chartEl.innerHTML = data
+    data
+    // console.log(data[1].amount)
+    chartEl.innerHTML = data.map(i => chartItem(i));
+}
+chart()
+
+
+
+
+// const chartEl = document.querySelector('#chart');
+
+// const formatMoneyToDollars = (amt) =>
+//   new Intl.NumberFormat("en-IN", { style: "currency", currency: "USD" }).format(
+//     amt
+//   );
+
+// const isCurrentDay = (dayName = 'Friday') => {
+//   const today = new Date().getDay();
+//   const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+//   return daysOfWeek[today] === dayName;
 // }
 
-// render init block
-const myChart = new Chart(
-  document.getElementById('myChart'),
-  config
-  
-);
+// function generateFakeItem(item){
+//   const data = {
+//     dayName: item.day,
+//     dayAbbr: item.day.substring(0, 3).toLowerCase(),
+//     dayAmt: item.amount,
+//     // barHeight: generateChartHeight(item.amount),
+//   };
+//   return `
+//   <div class="relative flex-1 grid">
+//     <button class="peer grid gap-3">
+//       <div class="bg-neutral2 animate-pulse rounded-sm h-0" style="height: ${data.dayAmt * 1.5}px;"></div>
+//       <p class="text-xs text-neutral2">${data.dayAbbr}</p>
+//     </button>
+//     <p class="bg-neutral1 text-neutral4 text-xs p-1 rounded-sm absolute -top-8 left-1/2 -translate-x-1/2 transition-opacity duration-300 opacity-0 peer-focus:opacity-100 peer-hover:opacity-100" aria-hidden="true">${formatMoneyToDollars(
+//       data.dayAmt
+//     )}</p>
+//   </div>
+// `;
+// }
+
+// function generateChartItem(item){
+//   const data = {
+//     dayName: item.day,
+//     dayAbbr: item.day.substring(0, 3).toLowerCase(),
+//     dayAmt: item.amount,
+//     currentDay: isCurrentDay(item.day),
+//   };
+//   return `
+//   <div class="relative flex-1 grid">
+//     <button class="peer grid gap-3 focus:outline-none focus-visible:ring-4 ${
+//       data.currentDay === true ? "ring-accent1" : "ring-accent2"
+//     } rounded-sm" aria-label="${
+//     data.dayName
+//   }’s spending was ${formatMoneyToDollars(data.dayAmt)}">
+//       <div class="${
+//         data.currentDay === true ? "bg-accent2" : "bg-accent1"
+//       } rounded-sm h-0" style="height: ${data.dayAmt * 3}px;"></div>
+//       <p class="text-xs text-neutral2">${data.dayAbbr}</p>
+//     </button>
+//     <p class="bg-neutral1 text-neutral4 text-xs p-1 rounded-sm absolute -top-8 left-1/2 -translate-x-1/2 transition-opacity duration-300 opacity-0 peer-focus:opacity-100 peer-hover:opacity-100" aria-hidden="true">${formatMoneyToDollars(
+//       data.dayAmt
+//     )}</p>
+//   </div>
+// `;
+// }
+
+// const wait = (amount = 0) =>
+//   new Promise((resolve) => setTimeout(resolve, amount));
+
+// const getRanNumBetween = (min=10, max=60) => Math.floor(Math.random() * (max - min + 1) + min);
+
+// async function fetchChartData(){
+//   const chartFetch = await fetch('./data.json');
+//   const chartData = await chartFetch.json();
+//   const array = chartData.map((i) => parseInt(i.amount));
+//   const chartHeight = Math.max(...array) + Math.max(...array);
+//   const fakeData = [
+//     {
+//       day: "Monday",
+//       amount: getRanNumBetween(0, chartHeight),
+//     },
+//     {
+//       day: "Tuesday",
+//       amount: getRanNumBetween(0, chartHeight),
+//     },
+//     {
+//       day: "Wednesday",
+//       amount: getRanNumBetween(0, chartHeight),
+//     },
+//     {
+//       day: "Thursday",
+//       amount: getRanNumBetween(0, chartHeight),
+//     },
+//     {
+//       day: "Friday",
+//       amount: getRanNumBetween(0, chartHeight),
+//     },
+//     {
+//       day: "Saturday",
+//       amount: getRanNumBetween(0, chartHeight),
+//     },
+//     {
+//       day: "Sunday",
+//       amount: getRanNumBetween(0, chartHeight),
+//     },
+//   ];
+//   chartEl.innerHTML = fakeData.map((i) => generateFakeItem(i)).join("");
+//   await wait(1000);
+//   chartEl.innerHTML = chartData.map(i => generateChartItem(i)).join('');
+// }
+// fetchChartData()
