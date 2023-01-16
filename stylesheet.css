@@ -5,8 +5,10 @@
     --medium-brown: hsl(28, 10%, 53%);
     --cream: hsl(27, 66%, 92%);
     --very-pale-orange: hsl(33, 100%, 98%);
+    --light-red: hsla(10, 100%, 76%, 1);
     --font-type: 'DM Sans';
     --height: 15;
+
 }
 
 *{
@@ -165,7 +167,9 @@ hr{
 .chart-btn{
     position: inherit;
     /* gap: auto; */
-    color:var(--soft-red);
+    background-color:var(--soft-red);
+    position: relative;
+    border-radius: 0.5rem;
 }
 
 .chart-item{
@@ -190,10 +194,14 @@ hr{
     background-color: var(--dark-brown);
     border-radius: 0.125rem;
     line-height: 1rem;
-    font-size: 0.75rem;
+     font-size: 0.75rem;
     overflow: hidden;
-    /* display: none; */
+    display: none; 
+
 }
+
+
+
 
 .chart-item-tooltip:hover{
     cursor: pointer;
