@@ -97,15 +97,6 @@ hr{
     border-radius: 1px;
     margin: 32px 0;
 }
-
-.chart{
-    width: 459.27px;
-    height: 240px;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 26px; 
-}
-
 .p-label{
     border-radius: 5px;
     color: var(--very-pale-orange);
@@ -152,4 +143,45 @@ hr{
     letter-spacing: 0px;
     text-align: right;
     align-self: flex-end;
+}
+
+.chart{
+    width: 459.27px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 26px;
+    background-color: aquamarine; 
+}
+
+.chart-btn{
+    position: relative;
+}
+
+.chart-item{
+    width: 50.36px;
+    height: 124px;
+}
+
+.chart-item-day{
+    font-size: 15px;
+    width: 50px;
+    height: 20px;
+    justify-content: center;
+    color: var(--medium-brown);
+}
+
+.chart-item-tooltip{
+    color:#ffffff;
+    background-color: ;
+    font-size: ;
+    padding: ;
+}
+
+.chart-item-tooltip:hover{
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23px;
 }
