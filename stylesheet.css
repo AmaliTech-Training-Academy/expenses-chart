@@ -5,8 +5,10 @@
     --medium-brown: hsl(28, 10%, 53%);
     --cream: hsl(27, 66%, 92%);
     --very-pale-orange: hsl(33, 100%, 98%);
+    --light-red: hsla(10, 100%, 76%, 1);
     --font-type: 'DM Sans';
     --height: 15;
+
 }
 
 *{
@@ -152,19 +154,11 @@ hr{
     flex-direction: column;
     justify-content: space-between;
     margin-top: 26px;
-    
-}
-
-.chart-card{
-    position: relative;
-    display: flex;
     background-color: aquamarine; 
 }
 
 .chart-btn{
-    position: absolute;
-    gap: 5;
-    flex-direction: column;
+    position: relative;
 }
 
 .chart-item{
@@ -185,4 +179,250 @@ hr{
     background-color: ;
     font-size: ;
     padding: ;
+}
+
+.chart-item-tooltip:hover{
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23px;
+} 
+
+.bar-container{
+  
+}
+
+
+.mon{
+    display: inline-block;
+    position: relative;
+    width: 50.36px;
+    height: 150px;
+    background-color: var(--soft-red);
+    border-radius: 5px;
+   
+}
+
+.mon .tooltip{
+    width: 75px;
+    height: 40px;
+    top: -20%;
+    left: 20%;
+    transform: translate(-30%, -100%);
+    padding: 10px 12px;
+    color: #ffffff;
+    background-color: black;
+    font-weight: normal;
+    font-family: var(--font-type);
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 8px;
+    position: absolute;
+    box-sizing: border-box;
+    display: none;
+}
+
+.bar-chart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 17.91px;
+}
+.mon:hover{
+    cursor: pointer;
+}
+.mon:hover .tooltip{
+    display: block;
+} 
+
+
+.wed{
+    display: inline-block;
+    position: relative;
+    width: 50.36px;
+    height: 150px;
+    background-color: var(--cyan);
+    border-radius: 5px;
+   
+}
+
+.wed .tooltip3{
+    width: 75px;
+    height: 40px;
+    top: -20%;
+    left: 20%;
+    transform: translate(-30%, -100%);
+    padding: 10px 12px;
+    color: #ffffff;
+    background-color: black;
+    font-weight: normal;
+    font-family: var(--font-type);
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 8px;
+    position: absolute;
+    box-sizing: border-box;
+    display: none;
+}
+
+
+.wed:hover{
+    cursor: pointer;
+    background-color:   #B4E0E5;
+}
+.wed:hover .tooltip3{
+    display: block;
+}
+
+
+.tue{
+    display: inline-block;
+    position: relative;
+    width: 50.36px;
+    height: 150px;
+    background-color: var(--soft-red);
+    border-radius: 5px;
+   
+}
+
+.tue .tooltip2{
+    width: 75px;
+    height: 40px;
+    top: -20%;
+    left: 20%;
+    transform: translate(-30%, -100%);
+    padding: 10px 12px;
+    color: #ffffff;
+    background-color: black;
+    font-weight: normal;
+    font-family: var(--font-type);
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 8px;
+    position: absolute;
+    box-sizing: border-box;
+    display: none;
+}
+
+
+.tue:hover{
+    cursor: pointer;
+}
+.tue:hover .tooltip2{
+    display: block;
+}
+
+
+
+.thu{
+   
+    position: relative;
+    width: 50.36px;
+    height: 150px;
+    background-color: var(--soft-red);
+    border-radius: 5px;
+   
+}
+
+.thu .tooltip4{
+    width: 75px;
+    height: 40px;
+    top: -20%;
+    left: 20%;
+    transform: translate(-30%, -100%);
+    padding: 10px 12px;
+    color: #ffffff;
+    background-color: black;
+    font-weight: normal;
+    font-family: var(--font-type);
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 8px;
+    position: absolute;
+    box-sizing: border-box;
+    display: none;
+}
+
+
+.thu:hover{
+    cursor: pointer;
+    background-color: var(--light-red);
+}
+.thu:hover .tooltip4{
+    display: block;
+}
+
+.fri{
+   
+    position: relative;
+    width: 50.36px;
+    height: 150px;
+    background-color: var(--soft-red);
+    border-radius: 5px;
+   
+}
+
+.fri .tooltip5{
+    width: 75px;
+    height: 40px;
+    top: -20%;
+    left: 20%;
+    transform: translate(-30%, -100%);
+    padding: 10px 12px;
+    color: #ffffff;
+    background-color: black;
+    font-weight: normal;
+    font-family: var(--font-type);
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 8px;
+    position: absolute;
+    box-sizing: border-box;
+    display: none;
+}
+
+
+.fri:hover{
+    cursor: pointer;
+}
+.fri:hover .tooltip5{
+    display: block;
+} 
+
+
+.sat{
+   
+    position: relative;
+    width: 50.36px;
+    height: 150px;
+    background-color: var(--soft-red);
+    border-radius: 5px;
+   
+}
+
+.sat .tooltip6{
+    width: 75px;
+    height: 40px;
+    top: -20%;
+    left: 20%;
+    transform: translate(-30%, -100%);
+    padding: 10px 12px;
+    color: #ffffff;
+    background-color: black;
+    font-weight: normal;
+    font-family: var(--font-type);
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 8px;
+    position: absolute;
+    box-sizing: border-box;
+    display: none;
+}
+
+
+.sat:hover{
+    cursor: pointer;
+}
+.sat:hover .tooltip6{
+    display: block;
 }
