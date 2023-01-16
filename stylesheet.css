@@ -172,16 +172,3 @@ hr{
     color: var(--medium-brown);
 }
 
-.chart-item-tooltip{
-    color:#ffffff;
-    background-color: ;
-    font-size: ;
-    padding: ;
-}
-
-.chart-item-tooltip:hover{
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 23px;
-}
