@@ -8,7 +8,7 @@ const trydump = map((item)=>{
 
 Data.map((item) => {
 	document.querySelector('.days').innerHTML = item.day;
-	document.querySelector('.price').innerHTML = item.amount;
+	document.querySelector('.amounts').innerHTML = item.amount;
 
 })
 
