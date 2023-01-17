@@ -5,7 +5,7 @@ function chartItem(item) {
     return `
         <div class="chart-card">
           <button class="chart-btn">
-              <div class="chart-item" style="height: ${item.amount *3.75}px;">
+              <div class="chart-item">
                 <p class="chart-item-tooltip">$${item.amount}</p>
               </div>
               <p class="chart-item-day">${item.day}</p>
