@@ -157,13 +157,11 @@ hr{
     justify-content: space-between;
     margin-top: 26px;
     align-items: baseline !important;
-    border: 0.4px dashed red;
 }
 
 .chart-card{
-    /* border: 0.4px dashed black; */border: 0.4px dashed greenyellow;
+    /* border: 0.4px dashed black; */
     position: relative;
-
 }
 
 .chart-btn{ 
@@ -171,8 +169,6 @@ hr{
     /* gap: auto; */
     position: relative;
     /* border-radius: 0.5rem; */
-    border: 0.4px dashed violet;
-    
     /* height: 220px; */
     background-color: transparent;
     border-color: transparent transparent;
