@@ -152,19 +152,19 @@ hr{
     width: 459.27px;
     text-align: center;
     height: 240px;
-    display: flex;
+    display: flex; 
     flex-direction: row;
     justify-content: space-between;
     margin-top: 26px;
+
 }
 
 .chart-card{
-    border: 0.4px dashed black;
-    /* display: flex; */
+    /* border: 0.4px dashed black; */
     position: relative;
 }
 
-.chart-btn{
+.chart-btn{ 
     position: absolute;
     /* gap: auto; */
     position: relative;
@@ -191,7 +191,7 @@ hr{
 
 .chart-item-tooltip{
     position: absolute;
-    top: -1rem;
+    top: -0.5rem;
     text-align: center;
     padding: 0.25rem;
     color:#ffffff;
