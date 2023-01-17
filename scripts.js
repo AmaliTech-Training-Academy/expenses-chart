@@ -1,13 +1,13 @@
-const chartEl=document.querySelector('#chart');
+// const chartEl=document.querySelector('#chart');
 
 const data = {
-  // labels: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
-  labels: '///work in here for {item.day}///',
+  labels: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
+  // labels: '///work in here for {item.day}///',
   datasets: [{
-    label: '$',
+    label: '',
     fontFamily: 'DM Sans',
-    // data: [ 17.45, 34.91, 52.36, 31.07, 23.39, 43.28, 25.48],
-    data: '///work in here for {item.day}///',
+    data: [ 17.45, 34.91, 52.36, 31.07, 23.39, 43.28, 25.48],
+    // data: '///work in here for {item.day}///',
     backgroundColor: [
       'rgba(236, 117, 93, 1)',
       'rgba(236, 117, 93, 1)',
@@ -36,11 +36,10 @@ const config = {
         beginAtZero: true,
         backgroundColor: null,
         display:false,
-          
         ticks: {
-         display: false,
-        
+        display: false,
         },
+
          grid: {
           drawTicks:false,
           drawOnChartArea:false,
@@ -51,27 +50,26 @@ const config = {
       },
       x: {
           // display:false,
+          border: {
+            display: false,
+          },
         ticks:{
             display: true,
             // display: true,
         }, 
-
         grid: {
           drawTicks:false,
           drawBorder: false,
-          drawOnChartArea: false,
           display: false,
           lineWidth: 0,
-        }
+          drawOnChartArea: true,
+        },
       }
     },
     plugins: {
       legend: {
         labels: {
-          font: {
-            fontFamily:'DM Sans',
-          },
-          boxWidth: 0,
+          boxWidth: false,
         }
       }
     }
@@ -86,12 +84,12 @@ const myChart = new Chart(
 );
 
 async function chart(){
-     const chartdata= await fetch('./data.json');
-     const data= await chartdata.json();
-     console.log(data);
-     // list_ = JSON.parse(data);
+      const chartdata= await fetch('./data.json');
+      const data= await chartdata.json();
+      console.log(data);
+      // list_ = JSON.parse(data);
  }
- chart()
+chart()
   
 
 
