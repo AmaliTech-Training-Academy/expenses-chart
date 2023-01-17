@@ -156,7 +156,7 @@ hr{
     flex-direction: row;
     justify-content: space-between;
     margin-top: 26px;
-
+    align-items: baseline !important;
 }
 
 .chart-card{
@@ -169,6 +169,7 @@ hr{
     /* gap: auto; */
     position: relative;
     /* border-radius: 0.5rem; */
+    
     height: 220px;
     background-color: transparent;
     border-color: transparent transparent;
