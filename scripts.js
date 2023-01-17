@@ -26,7 +26,7 @@ async function chart(){
     const chartdata= await fetch('./data.json');
     const data= await chartdata.json();
     console.log(data);
-    //  list_ = JSON.parse(data)
+    // list_ = JSON.parse(data)
      chartEl.innerHTML = data
     data
     // console.log(data[1].amount)

@@ -148,14 +148,14 @@ hr{
 }
 
 .chart{
+    color: transparent;
     width: 459.27px;
-    
+    text-align: center;
     height: 240px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 26px;
-    background-color: aquamarine; 
 }
 
 .chart-card{
@@ -165,16 +165,20 @@ hr{
 }
 
 .chart-btn{
-    position: inherit;
+    position: absolute;
     /* gap: auto; */
-    background-color:var(--soft-red);
     position: relative;
-    border-radius: 0.5rem;
+    /* border-radius: 0.5rem; */
+    height: 220px;
+    background-color: transparent;
+    border-color: transparent transparent;
 }
 
 .chart-item{
     width: 50.36px;
-    height: 177px;
+    height: 200px;
+    border-radius: 0.5rem;
+    background-color:var(--light-red);
 }
 
 .chart-item-day{
@@ -192,21 +196,16 @@ hr{
     padding: 0.25rem;
     color:#ffffff;
     background-color: var(--dark-brown);
-    border-radius: 0.125rem;
-    line-height: 1rem;
-     font-size: 0.75rem;
-    overflow: hidden;
-    display: none; 
-
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    /* overflow: hidden;
+    display: none;  */
 }
-
-
-
-
-.chart-item-tooltip:hover{
+ 
+.chart-item:hover{
     cursor: pointer;
-    display: contents;
-    /* font-size: 18px;
+    display: absolute;
+     /* font-size: 18px;
     font-weight: 700;
     line-height: 23px; */
 }
