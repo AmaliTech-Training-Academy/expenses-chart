@@ -157,11 +157,13 @@ hr{
     justify-content: space-between;
     margin-top: 26px;
     align-items: baseline !important;
+    border: 0.4px dashed red;
 }
 
 .chart-card{
-    /* border: 0.4px dashed black; */
+    /* border: 0.4px dashed black; */border: 0.4px dashed greenyellow;
     position: relative;
+
 }
 
 .chart-btn{ 
@@ -169,8 +171,9 @@ hr{
     /* gap: auto; */
     position: relative;
     /* border-radius: 0.5rem; */
+    border: 0.4px dashed violet;
     
-    height: 220px;
+    /* height: 220px; */
     background-color: transparent;
     border-color: transparent transparent;
 }
@@ -180,6 +183,7 @@ hr{
     height: 200px;
     border-radius: 0.5rem;
     background-color:var(--light-red);
+    margin-top: 20px;
 }
 
 .chart-item-day{
@@ -199,14 +203,17 @@ hr{
     background-color: var(--dark-brown);
     border-radius: 0.25rem;
     font-size: 0.75rem;
-    /* overflow: hidden;
-    display: none;  */
+    /* box-sizing: border-box; */
+    display: none;
 }
  
 .chart-item:hover{
     cursor: pointer;
     display: absolute;
-     /* font-size: 18px;
-    font-weight: 700;
-    line-height: 23px; */
+}
+
+
+.chart-item:hover .chart-item-tooltip{
+    display: block;
+    visibility: visible;
 }
