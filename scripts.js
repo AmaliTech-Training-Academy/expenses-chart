@@ -1,13 +1,17 @@
-// const chartEl=document.querySelector('#chart');
+// const fetchdata= await fetch('./data.json');
+// const JSONdata= await fetchdata.json();
+// console.log(JSONdata);
+
+
 
 const data = {
   labels: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
-  // labels: '///work in here for {item.day}///',
+  // labels: JSONdata.map(item => item.day),
   datasets: [{
     label: '',
-    fontFamily: 'DM Sans',
+     fontFamily: 'DM Sans',
     data: [ 17.45, 34.91, 52.36, 31.07, 23.39, 43.28, 25.48],
-    // data: '///work in here for {item.day}///',
+    // data: JSONdata.map(item => item.amount),
     backgroundColor: [
       'rgba(236, 117, 93, 1)',
       'rgba(236, 117, 93, 1)',
@@ -39,7 +43,7 @@ const config = {
         ticks: {
         display: false,
         },
-
+        
          grid: {
           drawTicks:false,
           drawOnChartArea:false,
@@ -56,6 +60,9 @@ const config = {
         ticks:{
             display: true,
             // display: true,
+            font: {
+              size: 15,
+          }
         }, 
         grid: {
           drawTicks:false,
@@ -79,18 +86,13 @@ const config = {
 
 const myChart = new Chart(
   document.getElementById('myChart'),
-  config
-  
+  config,
+  // fetchdata= await fetch('./data.json'),
+  // JSONdata= await fetchdata.json(),
+  // console.log(JSONdata),
 );
 
-async function chart(){
-      const chartdata= await fetch('./data.json');
-      const data= await chartdata.json();
-      console.log(data);
-      // list_ = JSON.parse(data);
- }
-chart()
-  
+ 
 
 
 

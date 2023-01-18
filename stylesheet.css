@@ -81,6 +81,11 @@ body{
     border-radius: 20px;
     background-color: var(--very-pale-orange);
 }
+
+.container2-hd h6{
+    padding: 32px 0 18px 0;
+}
+
 .container2 .container-card{
     margin: 32px 40px;
 }
@@ -155,7 +160,7 @@ hr{
     display: flex; 
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 26px;
+    /* margin-top: 26px; */
     align-items: baseline !important;
 }
 
